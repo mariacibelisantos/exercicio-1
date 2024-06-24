@@ -8,6 +8,7 @@
 </head>
 <body>
     <header class="site-header">
+        <!-- logo e menu -->
         <h1 class="site-logo">GTECH02</h1>
         <nav>
             <ul class="menu-list">
@@ -27,38 +28,72 @@
         </nav>
     </header>
 
+<!-- imagem slide menu -->
     <section id="home">
-        <img class="home-bg-image" src="https://www.ceara.gov.br/wp-content/uploads/2024/04/IMG_2054.jpg" alt="">
+        <img class="home-bg-image" src="https://geracaotech.iel-ce.org.br/images/img-garantir.png" alt="">
     </section>
 
-    
-
-    <section id="modulos">
-        <h2 class="modulo-title">Módulos</h2>
-            <div class="modulo-item"> Módulo 1</div>
-            <div class="modulo-item"> Módulo 2</div>
-            <div class="modulo-item"> Módulo 3</div>
-            <div class="modulo-item"> Módulo 4</div>
-    </section>
-
+<!-- modulos -->
     <div>
-        <img src="" alt="">
-        <div>
-            <h2>celular</h2>
-            <h3>memoria</h3>
-            <span>0000</span>
-            <button>comprar</button>
-        </div>
-
+        <div><h1 id="modulo-title">Módulos</h1></div>
+        <ul class="course-list">
+            <li class="course-item">
+               <p>Módulo 1</p>
+                <h6 id="description-modulo">Fundamentos do Desenvolvimento Web</h6>
+            </li>
+            <li class="course-item">
+               <p>Módulo 2</p>
+                <h6 id="description-modulo">Desenvolvimento Front-End</h6>
+            </li>
+            <li class="course-item">
+               <p>Módulo 3</p>
+                <h6 id="description-modulo">Desenvolvimento Back-End</h6>
+            </li>
+            <li class="course-item">
+               <p>Módulo 4</p>
+                <h6 id="description-modulo">Testes automatizados</h6>
+            </li>
+        </ul>
     </div>
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- imagens lado-a-lado -->
+    <ul class="image-list">
+        <li class="image-item">
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <img src="" alt="">
+        </li>
+        <li class="image-item">
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-comment"></i>
+            </div>
+            <img src="" alt="">
+        </li>
+        </li>
+    </ul>
+<!-- redes sociais e contato -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-form">
+                <h3>Entre em Contato</h3>
+                <form action="#">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="footer-contact">
+                <h3>Informações de Contato</h3>
+                <p>Endereço: Rua Exemplo, 123</p>
+                <p>Email: contato@oficinacar.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

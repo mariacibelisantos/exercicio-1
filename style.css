@@ -4,9 +4,26 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+ html {
+        margin: 0;
+        padding: 0;
+        -webkit-locale: "pt-br";
+        display: block;}
+
+html:root {
+    view-transition-name:root
+}
+body {
+    background-color: rgb(184, 219, 247);
+}
 
 ul {
     list-style: none;
+}
+
+li{
+    display: inline-block;
+    margin: 25px;
 }
 
 .site-header {
@@ -18,15 +35,15 @@ ul {
 }
 
 .site-logo {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, initial;
+    text-decoration: underline; 
 }
 
 .menu-list {
     display: flex;
     gap: 20px;
     align-items: center;
-    background-color:  rgb(28, 61, 124);;
+    background-color:rgb(28, 61, 124);
 }
 .menu-item {
     color: white;
@@ -35,15 +52,14 @@ ul {
 
 h5 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
-
 
 .menu-link:hover {
     text-decoration:underline;
     font-weight: bold;
     font-size: 22px;
     color: rgb(92, 165, 228);
+    transition: 1s;
 }
 
 .menu-link {
@@ -60,18 +76,28 @@ h5 {
 .home-title {
     position: absolute;
     padding: 30px;
-    color: white;
+    color: red;
     font-size: 32px;
 }
-
+.text-gtech {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
 .home-bg-image {
     width: 100%;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
-
-.modulo-title {
+#modulo-title {
     text-align: center;
-    margin: 40px 0;
-    background-color: lightblue;
+    background-color:rgb(184, 219, 247);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .modulo-image {
@@ -87,4 +113,170 @@ h5 {
 } 
 .image-left-rigth {
     background-image: url(https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/main/public/collection-1.png);
+}
+
+
+
+/* css dos módulos */
+
+ul {
+    list-style: none;
+}
+
+/*div, body, html, .course-list{
+    height: 100%;
+}*/
+
+#modulo-title {
+    text-align: center;
+    
+}
+.course-list {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 40vb;
+    background-color: rgb(184, 219, 247);
+}
+
+.course-item {
+    padding: 22px;
+    font-size: 22px;
+    background-color: #ededed;
+    width: 200px;
+    height: 150px;
+    border-top: 6px solid gray;
+    box-shadow: 2px 4px 5px 0 #bdbdbd;
+    transition: 0.5s ease-in-out;
+    background-image: url(https://geracaotech.iel-ce.org.br/images/logo-geracao-tech.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: relative;
+}
+
+#description-modulo {
+    color: rgb(73, 73, 73);
+}
+
+.course-item:hover {
+    transform: translateY(-10px);
+}
+
+.course-item:first-child {
+    border-top: 6px solid #009681;
+}
+
+.course-item:first-child:hover {
+    border-top-color: rgb(90, 90, 90);
+}
+
+.course-item span {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 10px;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+}
+
+
+/* css da imagem lado a lado */
+.image-list {
+    padding: 50px;
+    list-style: none;
+    height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: center;
+}
+.image-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.image-item:hover .icons {
+    display: block;
+}
+
+.image-item img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.image-item .icons {
+    position: absolute;
+    display: none;
+}
+
+.image-item i {
+    color: #fff;
+    font-size: 26px;
+    margin: 30px;
+}
+
+
+/* css das redes sociais */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    font-size: 1.6rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+.footer-form, .footer-contact {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-form h3, .footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form label {
+    margin-bottom: 5px;
+}
+
+.footer-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+.footer-form button {
+    padding: 10px;
+    font-size: 1.6rem;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
 }
