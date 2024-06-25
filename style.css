@@ -4,15 +4,18 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
- html {
-        margin: 0;
-        padding: 0;
-        -webkit-locale: "pt-br";
-        display: block;}
+
+html {
+    margin: 0;
+    padding: 0;
+    -webkit-locale: "pt-br";
+    display: block;
+}
 
 html:root {
-    view-transition-name:root
+    view-transition-name: root;
 }
+
 body {
     background-color: rgb(184, 219, 247);
 }
@@ -21,7 +24,7 @@ ul {
     list-style: none;
 }
 
-li{
+li {
     display: inline-block;
     margin: 25px;
 }
@@ -36,15 +39,23 @@ li{
 
 .site-logo {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, initial;
-    text-decoration: underline; 
+    text-decoration: underline;
+    color: white;
+
+}
+
+.site-logo-img {
+    width: 100px;
+
 }
 
 .menu-list {
     display: flex;
     gap: 20px;
     align-items: center;
-    background-color:rgb(28, 61, 124);
+    background-color: rgb(28, 61, 124);
 }
+
 .menu-item {
     color: white;
     background-color: rgb(28, 61, 124);
@@ -55,7 +66,7 @@ h5 {
 }
 
 .menu-link:hover {
-    text-decoration:underline;
+    text-decoration: underline;
     font-weight: bold;
     font-size: 22px;
     color: rgb(92, 165, 228);
@@ -71,7 +82,7 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .home-title {
     position: absolute;
@@ -79,6 +90,7 @@ h5 {
     color: red;
     font-size: 32px;
 }
+
 .text-gtech {
     display: block;
     font-size: 2em;
@@ -89,15 +101,17 @@ h5 {
     font-weight: bold;
     unicode-bidi: isolate;
 }
+
 .home-bg-image {
     width: 100%;
     overflow-clip-margin: content-box;
     overflow: clip;
 }
+
 #modulo-title {
     text-align: center;
-    background-color:rgb(184, 219, 247);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    background-color: rgb(184, 219, 247);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .modulo-image {
@@ -109,13 +123,11 @@ h5 {
 #modulos .modulo-item {
     width: 405px;
     height: 251px;
-    
-} 
+}
+
 .image-left-rigth {
     background-image: url(https://raw.githubusercontent.com/digitalcollegebr/projeto-digital-store/main/public/collection-1.png);
 }
-
-
 
 /* css dos módulos */
 
@@ -129,8 +141,8 @@ ul {
 
 #modulo-title {
     text-align: center;
-    
 }
+
 .course-list {
     display: flex;
     gap: 10px;
@@ -152,9 +164,6 @@ ul {
     border-top: 6px solid gray;
     box-shadow: 2px 4px 5px 0 #bdbdbd;
     transition: 0.5s ease-in-out;
-    background-image: url(https://geracaotech.iel-ce.org.br/images/logo-geracao-tech.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
     position: relative;
 }
 
@@ -186,6 +195,19 @@ ul {
     right: 5px;
 }
 
+.course-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://geracaotech.iel-ce.org.br/images/logo-geracao-tech.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    opacity: 5.3; /* Ajuste a opacidade conforme necessário */
+    z-index: 1; /* Garante que a imagem fique atrás do conteúdo */
+}
 
 /* css da imagem lado a lado */
 .image-list {
@@ -194,15 +216,18 @@ ul {
     height: 100vh;
     display: grid;
     gap: 5px;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 600px);
     justify-content: center;
 }
+
 .image-item {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    transition: 0.1s ease-in-out;
+    animation-delay: 2s;
+
 }
 
 .image-item:hover .icons {
@@ -210,9 +235,10 @@ ul {
 }
 
 .image-item img {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
+    flex-direction: column;
 }
 
 .image-item .icons {
@@ -226,10 +252,9 @@ ul {
     margin: 30px;
 }
 
-
 /* css das redes sociais */
 footer {
-    background-color: black;
+    background-color: rgb(8, 53, 78);
     color: white;
     padding: 20px 0;
     font-size: 1.6rem;
@@ -272,11 +297,15 @@ footer {
 .footer-form button {
     padding: 10px;
     font-size: 1.6rem;
-    background-color: yellow;
+    background-color: rgb(99, 77, 196);
     border: none;
     cursor: pointer;
 }
 
 .footer-contact p {
     margin-bottom: 10px;
+}
+
+button {
+    color: white;
 }
